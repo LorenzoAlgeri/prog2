@@ -1,0 +1,8 @@
+#index[4]
+questo è un test
+#index[4, secondo]
+di due indici diversi
+#index[3]
+questo invece è
+#index[3, quarto]
+un questo uguale

@@ -1,0 +1,2 @@
+#column[4, integer]
+1 2 3 4

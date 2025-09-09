@@ -1,0 +1,5 @@
+    minuti | ore minuti secondi
+-----------+-------------------
+  quindici | 10:15:30          
+venticique | 10:25:15          
+      otto | 09:08:07          

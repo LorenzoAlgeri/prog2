@@ -1,0 +1,19 @@
+  | prima  
+--+--------
+1 | uno    
+2 | due    
+3 | tre    
+4 | quattro
+5 | cinque 
+6 | sei    
+7 | sette  
+8 | otto   
+
+  | terza
+--+------
+1 | 1    
+2 | 2    
+3 | 3    
+4 | 4    
+5 | 5    
+6 | 6    

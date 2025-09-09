@@ -1,0 +1,21 @@
+#table[8, 5, integer]
+#column[8, integer, C0]
+#index[8]
+0 1 2 3 4 5 6 7
+170 100 50 20 10 20 50 100
+#column[8, integer, C1]
+#index[8]
+0 1 2 3 4 5 6 7
+85 50 25 10 5 10 25 50
+#column[8, integer, C2]
+#index[8]
+0 1 2 3 4 5 6 7
+34 20 10 4 2 4 10 20
+#column[8, integer, C3]
+#index[8]
+0 1 2 3 4 5 6 7
+170 100 50 20 10 20 50 100
+#column[8, integer, C4]
+#index[8]
+0 1 2 3 4 5 6 7
+85 50 25 10 5 10 25 50

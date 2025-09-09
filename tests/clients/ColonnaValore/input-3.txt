@@ -1,0 +1,4 @@
+#column[3]
+#index[3]
+0 1 2
+pin occhi o

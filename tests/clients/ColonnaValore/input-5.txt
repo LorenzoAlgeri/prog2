@@ -1,0 +1,4 @@
+#column[3, boolean]
+#index[3]
+vero falso falsetto
+true false false

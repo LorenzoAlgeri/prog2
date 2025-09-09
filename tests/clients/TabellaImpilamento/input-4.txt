@@ -1,0 +1,22 @@
+#table[2, 2, object]
+#column[2, integer, A]
+#index[2, string, zero]
+a b
+1 2
+#column[2, string, B]
+#index[2, string, zero]
+a b
+x y
+#table[2, 3, object]
+#column[2, integer, B]
+#index[2, string, one]
+c d
+4 5
+#column[2, string, C]
+#index[2, string, one]
+c d
+i j
+#column[2, string, X]
+#index[2, string, one]
+c d
+0 1

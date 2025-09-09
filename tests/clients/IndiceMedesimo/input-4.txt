@@ -1,0 +1,12 @@
+#index[4, primo]
+di due indici diversi
+#index[4, secondo]
+di due indici diversi
+#index[3, terzo]
+questo invece è
+#index[3]
+questo invece è
+#index[4, terzo]
+questo invece non è
+#index[3]
+questo invece è

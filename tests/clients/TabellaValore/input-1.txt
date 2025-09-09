@@ -1,0 +1,9 @@
+#table[3, 2]
+#column[3, integer, uno]
+#index[3]
+uno due tre
+11 21 31
+#column[3, integer, due]
+#index[3]
+uno due tre
+12 22 32

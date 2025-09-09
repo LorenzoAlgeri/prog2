@@ -1,0 +1,11 @@
+#table[2,3]
+#column[3, string, C0]
+#index[3, idx0]
+0 1 2
+un bel giorno
+#column[3, string, C1]
+#index[3, idx1]
+0 1 2
+di caldo sole
+#column[3, string, C2]
+non di piaggia

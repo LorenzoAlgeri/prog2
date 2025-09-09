@@ -1,0 +1,14 @@
+        | Column_0 | Column_1
+--------+----------+---------
+  prima | un       | giorno  
+seconda | bel      | assolato
+
+        | Column_0
+--------+---------
+  prima | un      
+seconda | bel     
+
+        | Column_1
+--------+---------
+  prima | giorno  
+seconda | assolato

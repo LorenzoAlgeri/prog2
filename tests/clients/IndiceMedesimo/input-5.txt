@@ -1,0 +1,8 @@
+#index[4, misto]
+un indice 3 misto
+#index[3, stringhe]
+un due tre
+#index[2, numeri]
+0 1
+#index[2, booleani]
+true false true

@@ -1,0 +1,16 @@
+#column[4, object, prima]
+#index[4]
+1 2 3 4
+uno due tre quattro
+#column[4, object, seconda]
+#index[4]
+5 6 7 8
+cinque sei sette otto
+#column[3, object, terza]
+#index[3]
+1 2 3
+1 2 3
+#column[3, object, quarta]
+#index[3]
+4 5 6
+4 5 6

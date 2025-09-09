@@ -1,0 +1,16 @@
+ misto
+------
+    un
+indice
+     3
+ misto
+   due
+   tre
+
+numeri
+------
+     1
+     2
+     3
+  true
+ false

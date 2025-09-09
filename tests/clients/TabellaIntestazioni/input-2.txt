@@ -1,0 +1,11 @@
+#table[2,3]
+#column[2, string, C0]
+#index[2, idx0]
+0 1
+un bel
+#column[2, string, C1]
+#index[2, idx1]
+0 1
+giorno di
+#column[2, string, C2]
+caldo sole

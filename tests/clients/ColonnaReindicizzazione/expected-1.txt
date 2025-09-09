@@ -1,0 +1,6 @@
+paperino | pippo  
+---------+--------
+       4 | quattro
+       3 | tre    
+       2 | due    
+       1 | uno    

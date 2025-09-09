@@ -1,0 +1,12 @@
+#index[4]
+questo è un test
+#index[4]
+questo è un test
+#index[3]
+questo invece è
+#index[3]
+un questo uguale
+#index[4]
+un test questo è
+#index[4]
+questo è un test

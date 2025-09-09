@@ -1,0 +1,1993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>README</title>
+<style>
+
+.markdown-body {
+  --base-size-4: 0.25rem;
+  --base-size-8: 0.5rem;
+  --base-size-16: 1rem;
+  --base-size-24: 1.5rem;
+  --base-size-40: 2.5rem;
+  --base-text-weight-normal: 400;
+  --base-text-weight-medium: 500;
+  --base-text-weight-semibold: 600;
+  --fontStack-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --fgColor-accent: Highlight;
+}
+@media (prefers-color-scheme: dark) {
+  .markdown-body, [data-theme="dark"] {
+    /* dark */
+    color-scheme: dark;
+    --focus-outlineColor: #1f6feb;
+    --fgColor-default: #f0f6fc;
+    --fgColor-muted: #9198a1;
+    --fgColor-accent: #4493f8;
+    --fgColor-success: #3fb950;
+    --fgColor-attention: #d29922;
+    --fgColor-danger: #f85149;
+    --fgColor-done: #ab7df8;
+    --bgColor-default: #0d1117;
+    --bgColor-muted: #151b23;
+    --bgColor-neutral-muted: #656c7633;
+    --bgColor-attention-muted: #bb800926;
+    --borderColor-default: #3d444d;
+    --borderColor-muted: #3d444db3;
+    --borderColor-neutral-muted: #3d444db3;
+    --borderColor-accent-emphasis: #1f6feb;
+    --borderColor-success-emphasis: #238636;
+    --borderColor-attention-emphasis: #9e6a03;
+    --borderColor-danger-emphasis: #da3633;
+    --borderColor-done-emphasis: #8957e5;
+    --color-prettylights-syntax-comment: #9198a1;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #f0f6fc;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-brackethighlighter-angle: #9198a1;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #f0f6fc;
+    --color-prettylights-syntax-markup-bold: #f0f6fc;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #f0f6fc;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .markdown-body, [data-theme="light"] {
+    /* light */
+    color-scheme: light;
+    --focus-outlineColor: #0969da;
+    --fgColor-default: #1f2328;
+    --fgColor-muted: #59636e;
+    --fgColor-accent: #0969da;
+    --fgColor-success: #1a7f37;
+    --fgColor-attention: #9a6700;
+    --fgColor-danger: #d1242f;
+    --fgColor-done: #8250df;
+    --bgColor-default: #ffffff;
+    --bgColor-muted: #f6f8fa;
+    --bgColor-neutral-muted: #818b981f;
+    --bgColor-attention-muted: #fff8c5;
+    --borderColor-default: #d1d9e0;
+    --borderColor-muted: #d1d9e0b3;
+    --borderColor-neutral-muted: #d1d9e0b3;
+    --borderColor-accent-emphasis: #0969da;
+    --borderColor-success-emphasis: #1a7f37;
+    --borderColor-attention-emphasis: #9a6700;
+    --borderColor-danger-emphasis: #cf222e;
+    --borderColor-done-emphasis: #8250df;
+    --color-prettylights-syntax-comment: #59636e;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-prettylights-syntax-entity: #6639ba;
+    --color-prettylights-syntax-storage-modifier-import: #1f2328;
+    --color-prettylights-syntax-entity-tag: #0550ae;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-brackethighlighter-angle: #59636e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #1f2328;
+    --color-prettylights-syntax-markup-bold: #1f2328;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #d1d9e0;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
+  }
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: var(--fgColor-accent);
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body mark {
+  background-color: var(--bgColor-attention-muted);
+  color: var(--fgColor-default);
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em var(--base-size-40);
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--borderColor-muted);
+  height: .25em;
+  padding: 0;
+  margin: var(--base-size-24) 0;
+  background-color: var(--borderColor-default);
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: var(--fgColor-muted);
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  font-variant: tabular-nums;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid var(--focus-outlineColor);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid var(--focus-outlineColor);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: var(--base-size-4);
+  font: 11px var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  line-height: 10px;
+  color: var(--fgColor-default);
+  vertical-align: middle;
+  background-color: var(--bgColor-muted);
+  border: solid 1px var(--borderColor-neutral-muted);
+  border-bottom-color: var(--borderColor-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--borderColor-neutral-muted);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: var(--base-size-24);
+  margin-bottom: var(--base-size-16);
+  font-weight: var(--base-text-weight-semibold, 600);
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body h3 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: var(--base-text-weight-semibold, 600);
+  font-size: .85em;
+  color: var(--fgColor-muted);
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--fgColor-muted);
+  border-left: .25em solid var(--borderColor-default);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--fontStack-monospace, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace);
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: var(--base-size-8, 8px) !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: var(--fgColor-danger);
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: var(--base-size-4);
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: var(--fgColor-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: var(--base-size-16);
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: var(--base-size-16);
+  font-size: 1em;
+  font-style: italic;
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body dl dd {
+  padding: 0 var(--base-size-16);
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body table th {
+  font-weight: var(--base-text-weight-semibold, 600);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--borderColor-default);
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: var(--bgColor-default);
+  border-top: 1px solid var(--borderColor-muted);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--bgColor-muted);
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--borderColor-default);
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--fgColor-default);
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--bgColor-neutral-muted);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: var(--base-size-16);
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-muted);
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px var(--base-size-8) 9px;
+  text-align: right;
+  background: var(--bgColor-default);
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: var(--base-text-weight-semibold, 600);
+  background: var(--bgColor-muted);
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--fgColor-muted);
+  border-top: 1px solid var(--borderColor-default);
+}
+
+.markdown-body .footnotes ol {
+  padding-left: var(--base-size-16);
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: var(--base-size-16);
+  margin-top: var(--base-size-16);
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: calc(var(--base-size-8)*-1);
+  right: calc(var(--base-size-8)*-1);
+  bottom: calc(var(--base-size-8)*-1);
+  left: calc(var(--base-size-24)*-1);
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--borderColor-accent-emphasis);
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: var(--fgColor-default);
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body body:has(:modal) {
+  padding-right: var(--dialog-scrollgutter) !important;
+}
+
+.markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible),
+.markdown-body button:focus:not(:focus-visible),
+.markdown-body summary:focus:not(:focus-visible),
+.markdown-body a:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.markdown-body [tabindex="0"]:focus:not(:focus-visible),
+.markdown-body details-dialog:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: var(--base-text-weight-normal, 400);
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: var(--base-text-weight-normal, 400);
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: var(--base-size-4);
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body ul:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body ol:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: var(--base-size-8) var(--base-size-16);
+  margin-bottom: var(--base-size-16);
+  color: inherit;
+  border-left: .25em solid var(--borderColor-default);
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--base-text-weight-medium, 500);
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: var(--borderColor-accent-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--fgColor-accent);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: var(--borderColor-done-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--fgColor-done);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: var(--borderColor-attention-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--fgColor-attention);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: var(--borderColor-success-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--fgColor-success);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: var(--borderColor-danger-emphasis);
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--fgColor-danger);
+}
+
+.markdown-body>*:first-child>.heading-element:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .highlight pre:has(+.zeroclipboard-container) {
+  min-height: 52px;
+}
+
+
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.hll { background-color: #ffffcc }
+.c { color: #3D7B7B; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.cp { color: #9C6500 } /* Comment.Preproc */
+.cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.gr { color: #E40000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #008400 } /* Generic.Inserted */
+.go { color: #717171 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #687822 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #717171; font-weight: bold } /* Name.Entity */
+.ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #767600 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sa { color: #BA2121 } /* Literal.String.Affix */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #A45A77 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.fm { color: #0000FF } /* Name.Function.Magic */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.vm { color: #19177C } /* Name.Variable.Magic */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+/* md2html specific */
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+code {
+  white-space: pre-wrap !important;
+  }
+</style></head><body class="markdown-body">
+<h1>Mole</h1>
+<p>Questo repository contiene il <strong>progetto d'esame</strong> della sessione autunnale per
+l'insegnamento di "Programmazione II" all'a.a 2024/2025.</p>
+<p>Obiettivo del progetto è realizzare una libreria per la gestione di <strong>dati
+tabellari</strong> in grado di svolgere un sottoinsieme minimale delle funzionalità di
+strumenti analoghi, come la libreria <a href="https://pandas.pydata.org/">Pandas</a> per
+Python, o <a href="https://docs.pola.rs/">Polars</a> per Rust.</p>
+<p>Per portare a termine il lavoro dovrà decidere se e quali classi (concrete o
+astratte) e quali interfacce implementare. Per ciascuna di esse <strong>dovrà
+descrivere</strong> (in formato Javadoc attraverso commenti presenti nel codice) le
+scelte relative alla <strong>rappresentazione</strong> dello stato (con particolare
+riferimento all'<strong>invariante di rappresentazione</strong> e alla <strong>funzione di
+astrazione</strong> così come definiti nel libro di testo dell'insegnamento e
+illustrati a lezione) e ai <strong>metodi</strong> (con particolare riferimento a
+<em>pre/post-condizioni</em> ed <em>effetti collaterali</em>, soffermandosi ad illustrare le
+ragioni della <em>correttezza</em> solo per le implementazioni che riterrà più
+critiche). Osservi che l'esito di questa prova, che le consentirà di accedere o
+meno all'orale, si baserà tanto su questa documentazione quanto sul codice
+sorgente.</p>
+<p>Può prendere visione dei dettagli tecnici riguardanti la realizzazione del
+progetto nelle apposite <a href="ISTRUZIONI.html">istruzioni</a>. Osservi che <strong>la presenza
+di errori o fallimenti nella compilazione, generazione della documentazione ed
+esecuzione dei test impedisce il superamento dell'esame</strong>.</p>
+<blockquote>
+<p><strong>Nota bene</strong>: prenda <em>attentamente</em> visione della <em>checklist</em> presente nelle
+istruzioni, in modo da assicurarsi di aver completato tutti i punti richiesti.
+prima di consegnare. Non sarà consentita <em>nessuna eccezione</em> a tale regola.</p>
+</blockquote>
+<h2>Descrizione delle entità coinvolte</h2>
+<p>Le entità coinvolte nel progetto sono: <strong>indici</strong>, <strong>colonne</strong> e <strong>tabelle</strong>. Di
+seguito ne vengono illustrate le caratteristiche principali (le informazioni che
+le descrivono e le competenze che possiedono).</p>
+<h3>Indice</h3>
+<p>Un <strong>indice</strong> è una entità immutabile data da sequenza di <em>etichette</em> distinte,
+al fine di consentire la massima libertà implementativa è conveniente
+rappresentare le etichette tramite <code>Object</code>. Un indice ha  una <em>lunghezza</em> <span class="arithmatex">\(\ell&gt; 0\)</span> 
+(corrispondente al numero delle sue etichette) e opzionalmente un <em>nome</em>.
+Le operazioni fondamentali di un indice sono:</p>
+<ul>
+<li>determinare l'etichetta alla posizione <span class="arithmatex">\(i\)</span>-esima (per <span class="arithmatex">\(0\leq i&lt; \ell\)</span>);</li>
+<li>determinare la posizione di una etichetta <span class="arithmatex">\(e\)</span> (se presente) nell'indice
+  (eventualmente indicando -1 se non presente);</li>
+<li>enumerare le proprie etichette.</li>
+</ul>
+<blockquote>
+<p><strong>Più formalmente</strong>: nel seguito, useremo la notazione <span class="arithmatex">\(\mathcal{I}_{\ell}\)</span>
+per denotare un indice di lunghezza <span class="arithmatex">\(\ell\)</span> e le notazioni
+<span class="arithmatex">\(\mathcal{I}_{\ell}[i]\)</span> per indicare la prima operazione e
+<span class="arithmatex">\(\mathcal{I}_{\ell}^{-1}[e]\)</span> per la seconda. Noti che, per ogni etichetta
+<span class="arithmatex">\(e\in \mathcal{I}_{\ell}\)</span> e posizione <span class="arithmatex">\(0\leq i&lt;\ell\)</span> vale che
+<span class="arithmatex">\(\mathcal{I}_{\ell}[\mathcal{I}_{\ell}^{-1}[e]]\)</span> e
+<span class="arithmatex">\(\mathcal{I}_{\ell}^{-1}[\mathcal{I}_{\ell}[i]]\)</span> equivalgono entrambe alla
+funzione identità (la prima sul <span class="arithmatex">\(\{e\mid e\in \mathcal{I}_{\ell}\}\)</span> e la
+seconda su <span class="arithmatex">\([0, \ell-1]\subset \mathbb{N}\)</span>).</p>
+</blockquote>
+<p>Un indice è in grado di <em>fondersi</em> con un altro indice, ossia di produrre un
+nuovo indice contenente le etichette del primo seguite da quelle del secondo che
+non sono contenute nel primo (attenzione però: questa operazione non è però
+sempre possibile: potrebbe produrre un indice con troppe etichette). Un indice è
+il <em>medesimo</em> di un altro se (eventualmente con nomi diversi) hanno la stessa
+lunghezza e le etichette ordinatamente uguali (secondo il metodo <code>equals</code>). Un
+indice può produrre un indice a se medesimo, ma con un nuovo nome (questo è
+utile per "rinominare" un indice, mantenendo la richiesta di immutabilità).</p>
+<h4>Casi esemplari</h4>
+<p>Alcuni casi esemplari di indici possono essere costruiti a partire da una
+<em>lista</em> di <code>String</code>, come ad esempio l'indice di nome "Giorni"</p>
+<div class="highlight"><pre><span></span><code>   Giorni
+---------
+   Lunedì
+  Martedì
+Mercoledì
+  Giovedì
+  Venerdì
+   Sabato
+ Domenica
+</code></pre></div>
+<p>Un altro esempio è dato dagli <em>indici numerici</em> costruiti a partire da una
+<em>progressione aritmetica</em>, in cui le etichette sono <code>Integer</code>, come ad esempio
+l'indice dei numeri dispari minori di 10:</p>
+<div class="highlight"><pre><span></span><code>Dispari
+-------
+      1
+      3
+      5
+      7
+      9
+</code></pre></div>
+<p>la progressione aritmetica è completamente specificata dati il suo valore
+<em>iniziale</em>, il <em>passo</em> e quello <em>finale</em> (che non appartiene alla progressione);
+l'esempio precedente corrisponde alla terna 1, 10, 1.</p>
+<h3>Colonna</h3>
+<p>Una <strong>colonna</strong> è una entità immutabile data da sequenza di <em>valori</em>, i valori
+possono essere ad esempio numeri, booleani, stringhe o date (si veda la sezione
+sui "Generici" per una discussione su come rappresentarli). Una colonna ha un
+<em>numero di righe</em> <span class="arithmatex">\(\rho &gt; 0\)</span> (corrispondente al numero dei suoi valori), un
+<em>indice</em> (di lunghezza <span class="arithmatex">\(\ell = \rho\)</span>) e opzionalmente un <em>nome</em>. Le operazioni
+fondamentali di una colonna sono:</p>
+<ul>
+<li>determinare il valore alla posizione <span class="arithmatex">\(i\)</span>-esima (per <span class="arithmatex">\(0\leq i&lt;\rho\)</span>);</li>
+<li>determinare il valore corrispondente ad una etichetta <span class="arithmatex">\(e\)</span> dell'indice,</li>
+<li>enumerare i propri valori.</li>
+</ul>
+<blockquote>
+<p><strong>Più formalmente</strong>: useremo la notazione <span class="arithmatex">\(C^\mathcal{I}_{\rho}\)</span> per denotare
+una colonna di lunghezza <span class="arithmatex">\(\rho\)</span> con indice <span class="arithmatex">\(\mathcal{I}_{\rho}\)</span> (dove nella
+notazione della colonna si è omessa la dimensione a pedice dell'indice in
+quanto identica a <span class="arithmatex">\(\rho\)</span>), useremo la notazione <span class="arithmatex">\(C^\mathcal{I}_{\rho}[i]\)</span> e
+(con leggero abuso) <span class="arithmatex">\(C^\mathcal{I}_{\rho}[e]\)</span> per indicare, rispettivamente,
+la prima e seconda operazione. Si osservi che se <span class="arithmatex">\(e\in \mathcal{I}_{\rho}\)</span>,
+allora <span class="arithmatex">\(C^\mathcal{I}_{\rho}[e] =
+C^\mathcal{I}_{\rho}[\mathcal{I}_{\rho}^{-1}[e]]\)</span>, fatto che mette formalmente
+in evidenza il ruolo dell'indice della colonna.</p>
+</blockquote>
+<p>Una colonna può produrre una nuova colonna con i medesimi valori e un nuovo
+indice, o nome (questo è utile per "cambiare" l'indice, o "rinominare" la
+colonna, mantenendo la richiesta di immutabilità).</p>
+<p>Una operazione più complessa è data dalla <em>reindicizzazione</em>: dato un nuovo
+indice <span class="arithmatex">\(J\)</span>, una colonna <span class="arithmatex">\(C\)</span> con indice <span class="arithmatex">\(I\)</span> può produrre una nuova colonna <span class="arithmatex">\(R\)</span>
+che abbia per numero di righe la lunghezza di <span class="arithmatex">\(J\)</span> e tale che il valore di <span class="arithmatex">\(R\)</span> in
+corrispondenza di una etichetta di <span class="arithmatex">\(J\)</span> sia:</p>
+<ul>
+<li>il valore di <span class="arithmatex">\(C\)</span> in corrispondenza della stessa etichetta, se presente in <span class="arithmatex">\(I\)</span>,
+  oppure</li>
+<li>il valore <code>null</code>.</li>
+</ul>
+<p>Questo implica inoltre che il valore di <span class="arithmatex">\(R\)</span> in corrispondenza della posizione
+<span class="arithmatex">\(i\)</span> è pari al valore di <span class="arithmatex">\(R\)</span> in corrispondenza dell'etichetta in posizione <span class="arithmatex">\(i\)</span> di
+<span class="arithmatex">\(J\)</span>.</p>
+<blockquote>
+<p><strong>Più formalmente</strong>: data una colonna <span class="arithmatex">\(C^\mathcal{I}_{\rho}\)</span> e un indice
+<span class="arithmatex">\(\mathcal{J}_{\ell}\)</span> (eventualmente con <span class="arithmatex">\(\ell\neq\rho\)</span>), la reindicizzazione
+è la nuova colonna <span class="arithmatex">\(R^{\mathcal{J}}_{\ell}\)</span> tale che 
+$$
+R^{\mathcal{J}}<em>{\ell}[e] = 
+\begin{cases}
+   C^{\mathcal{I}}</em>{\rho}[e] &amp; \text{se } e\in \mathcal{I}<em>{\rho} \
+   \texttt{null} &amp; \text{altrimenti}.
+\end{cases}
+$$
+da questo deriva che, per <span class="arithmatex">\(i\in [0, \ell-1]\)</span> si ha
+$$
+R^{\mathcal{J}}</em>{\ell}[i] =
+\begin{cases}
+  C^{\mathcal{I}}<em>{\rho}[
+ \mathcal{I}</em>{\rho}^{-1}[\mathcal{J}<em>{\ell}[i]]
+ ] &amp; \text{se } i\in \mathcal{I}</em>{\rho}^{-1}[\mathcal{J}_{\ell}]  \
+ \texttt{null} &amp; \text{altrimenti}.</p>
+<p>\end{cases}
+$$</p>
+</blockquote>
+<p>Si consideri ad esempio la colonna di nome "Lunghezza" con indice "Giorni" in
+cui il valore corrispondente a ciascun giorno è il numero di lettere che ne
+compongono il nome:</p>
+<div class="highlight"><pre><span></span><code>   Giorni | Lunghezza
+----------+----------
+   Lunedì | 6        
+  Martedì | 7        
+Mercoledì | 9        
+  Giovedì | 7        
+  Venerdì | 7        
+   Sabato | 6        
+ Domenica | 8        
+</code></pre></div>
+<p>dato l'indice "Fantasia":</p>
+<div class="highlight"><pre><span></span><code> Fantasia
+---------
+  Venerdì
+   Luvedì
+  Giovedì
+  Marvedì
+Mercoledì
+   Lunedì
+</code></pre></div>
+<p>la reindicizzazione della colonna "Lunghezza" con tale indice produce la nuova
+colonna:</p>
+<div class="highlight"><pre><span></span><code> Fantasia | Lunghezza
+----------+----------
+  Venerdì | 7        
+   Luvedì |          
+  Giovedì | 7        
+  Marvedì |          
+Mercoledì | 9        
+   Lunedì | 6        
+</code></pre></div>
+<p>dove i valori corrispondenti a giorni di fantasia, assenti nella tabella
+"Lunghezza", risultano <code>null</code> (valore visivamente rappresentato con una stringa
+vuota).</p>
+<h3>Tabella</h3>
+<p>Una <strong>tabella</strong> è una entità immutabile data da una sequenza di <span class="arithmatex">\(\kappa &gt; 0\)</span>
+<em>colonne</em> con nomi distinti che hanno il medesimo indice (e quindi lo stesso
+numero di righe), per semplicità assumeremo che le colonne abbiano valori tutti
+dello stesso tipo (o tutti sottotipi di un medesimo tipo — come nel caso delle
+colonne, si veda la sezione sui "Generici" per una discussione più
+approfondita). Oltre al <em>numero di colonne</em> <span class="arithmatex">\(\kappa\)</span>, la tabella ha un <em>numero
+di righe</em> e un <em>indice di riga</em> (che corrispondono ai rispettivi valori della
+prima colonna), ma <em>non</em> ha un nome. </p>
+<blockquote>
+<p><strong>Più formalmente</strong>: useremo la notazione <span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}=
+T^\mathcal{I_{\rho}}_{\kappa}\langle C^{(0)}_{\rho}, C^{(1)}_{\rho},
+\ldots, C^{(\kappa-1)}_{\rho} \rangle\)</span> per denotare una tabella con
+<span class="arithmatex">\(\kappa\)</span> colonne <span class="arithmatex">\(C^{(0)}_{\rho}, C^{(1)}_{\rho}, \ldots,
+C^{(\kappa-1)}_{\rho}\)</span> (si noti che in luogo degli indici delle colonne, viene
+indicato solo l'<em>indice di riga</em> <span class="arithmatex">\(\mathcal{I_{\rho}}\)</span> medesimo di tutti quelli
+delle colonne. La tabella è una matrice <span class="arithmatex">\(\rho \times \kappa\)</span> di valori. </p>
+</blockquote>
+<p>All'atto della creazione di una tabella, le colonne senza nome vengono
+rinominate con un nome dato da <code>Column_</code> seguito dalla posizione (numerata da
+zero) della colonna nella sequenza. In questo modo è garantito che i nomi delle
+colonne siano distinti.</p>
+<blockquote>
+<p><strong>Più formalmente</strong>: useremo la notazione <span class="arithmatex">\(\mathcal{H}_{\kappa}\)</span> per denotare
+l'<em>indice di intestazioni di colonne</em>, altrimenti detto, se <span class="arithmatex">\(0&lt;j\leq \kappa\)</span>,
+allora <span class="arithmatex">\(\mathcal{H}_{\kappa}[j]\)</span> è il nome della <span class="arithmatex">\(j\)</span>-esima colonna.</p>
+</blockquote>
+<p>Le operazioni fondamentali di una tabella sono:</p>
+<ul>
+<li>determinare la colonna alla posizione <span class="arithmatex">\(j\)</span>-esima (con <span class="arithmatex">\(0&lt;j\leq\kappa\)</span>);</li>
+<li>determinare la colonna corrispondente all'etichetta <span class="arithmatex">\(e\)</span> dell'indice delle
+  colonne;</li>
+<li>determinare il valore alla posizione <span class="arithmatex">\(i\)</span>-esima (con <span class="arithmatex">\(0&lt;i\leq \rho\)</span>) della
+  <span class="arithmatex">\(j\)</span>-esima colonna (con <span class="arithmatex">\(0&lt;j\leq \kappa\)</span>);</li>
+<li>determinare il valore corrispondente alla riga data dall'etichetta <span class="arithmatex">\(e\in
+  \mathcal{I}_{\rho}\)</span> della colonna data dall'etichetta <span class="arithmatex">\(f\in
+  \mathcal{H}_{\kappa}\)</span>;</li>
+<li>enumerare le proprie colonne.</li>
+</ul>
+<blockquote>
+<p><strong>Più formalmente</strong>: data la tabella <span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}\langle
+C^{(0)}_{\rho}, C^{(1)}_{\rho}, \ldots, C^{(\kappa-1)}_{\rho} \rangle\)</span> e
+seguendo la notazione usata per indici e colonne, avremo la seguente notazione
+per le prime quattro operazioni di cui sopra.</p>
+<ul>
+<li><span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}[j] = C^{(j)}_{\rho}\)</span> </li>
+<li><span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}[f] = C^{(\mathcal{H}^{-1}_{\kappa}[f])}_{\rho}\)</span></li>
+<li><span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}[i, j] = C^{(j)}_{\rho}[i]\)</span> </li>
+<li><span class="arithmatex">\(T^\mathcal{I_{\rho}}_{\kappa}[e, f] = C^{(\mathcal{H}^{-1}_{\kappa}[f])}_{\rho}[\mathcal{H}^{-1}_{\kappa}[e]]\)</span></li>
+</ul>
+<p>dove l'uguaglianza pone in relazione la notazione di tabella con quella di
+colonna.</p>
+</blockquote>
+<p>Una tabella può produrre una nuova tabella con i medesimi valori e un altro
+indice di riga, o di intestazioni di colonna (al solito, questo è utile per
+"cambiare" gli indici, ossia le etichette di righe e colonne, mantenendo la
+richiesta di immutabilità).</p>
+<h2>Operazioni avanzate</h2>
+<h3>Impilare e affiancare</h3>
+<p>Talvolta può essere utile "unire" colonne, o tabelle. Il fatto che le colonne
+abbiano una sola dimensione, mentre le tabelle due, rende l'operazione
+sostanzialmente diversa nei due casi.</p>
+<h4>Impilare colonne</h4>
+<p>Nel caso delle colonne, l'unica possibilità è <strong>impilare</strong> (in verticale) due
+colonne (i cui indici non abbiano etichette in comune) ottenendo una nuova
+colonna che ha per indice e valori la concatenazione rispettivamente dei due
+indici e valori. Occorre ovviamente fare un po' di attenzione ai tipi: in genere
+è possibile impilare alla prima colonna una i cui valori siano (al più)
+sottotipi del tipo dei valori della prima.</p>
+<p>Ad esempio, potrebbe essere utile impilare le due colonne</p>
+<div class="highlight"><pre><span></span><code>  |          
+--+----------
+0 | Lunedì   
+1 | Martedì  
+2 | Mercoledì
+</code></pre></div>
+<p>e</p>
+<div class="highlight"><pre><span></span><code>  |         
+--+---------
+0 | Giovedì 
+1 | Venerdì 
+2 | Sabato  
+3 | Domenica
+</code></pre></div>
+<p>occorre però notare che gli indici non sono distinti, pertanto dapprima va
+sostituito l'indice della seconda, ad esempio con l'indice numerico da 3 a 6,
+ottenendo la colonna</p>
+<div class="highlight"><pre><span></span><code>  |         
+--+---------
+3 | Giovedì 
+4 | Venerdì 
+5 | Sabato  
+6 | Domenica
+</code></pre></div>
+<p>che è finalmente possibile impilare alla prima, ottenendo</p>
+<div class="highlight"><pre><span></span><code>  |          
+--+----------
+0 | Lunedì   
+1 | Martedì  
+2 | Mercoledì
+3 | Giovedì  
+4 | Venerdì  
+5 | Sabato   
+6 | Domenica
+</code></pre></div>
+<h4>Impilare e affiancare tabelle</h4>
+<p>Nel caso delle tabelle, è possibile sia porre una tabella "sotto" che "a fianco"
+dell'altra. Ovviamente l'indice (di riga, o delle intestazioni di colonna) che
+sarà concatenato non può contenere duplicati (detto altrimenti, gli indici di
+riga, o intestazioni di colonna, non devono avere etichette in comune); si
+potrebbe richiedere che l'altro indice (di intestazioni di colonna, o riga), sia
+il medesimo nelle due tabelle, ma questo è troppo restrittivo, è preferibile
+consentire che i due indici si fondano.</p>
+<p>In maggior dettaglio, si consideri dapprima il caso in cui due tabelle (i cui
+indici di riga non devono avere etichette comuni) si <strong>impilino in verticale</strong>.
+Gli indici delle intestazioni di colonna e di riga risultanti sono dati dalla
+fusione dei rispettivi indici delle due tabelle. Le colonne relative ad
+etichette presenti in una sola delle due tabelle sono date dalla
+<em>reindicizzazione</em> rispetto ai nuovi indici, mentre quelle relative a etichette
+presenti in entrambe le tabelle sono ottenute <em>impilando</em> le colonne
+corrispondenti delle due tabelle. Si considerino per esempio le tabelle:</p>
+<div class="highlight"><pre><span></span><code>zero | A | B
+-----+---+--
+   a | 1 | x
+   b | 2 | y
+</code></pre></div>
+<p>e</p>
+<div class="highlight"><pre><span></span><code>one | B | C
+----+---+--
+  c | 4 | i
+  d | 5 | j
+</code></pre></div>
+<p>Per prima cosa, si osservi che gli indici di nome "zero" e "uno" non hanno
+etichette in comune, inoltre le tabelle hanno tipo di dato <code>Object</code> di cui sono
+sottotipi si gil <code>Integer</code> della colonna di nome "A" che le <code>String</code> della
+colonna di nome "B". Il risultato che si ottiene impilando in verticale alla
+prima la seconda è</p>
+<div class="highlight"><pre><span></span><code>zero | A | B | C
+-----+---+---+--
+   a | 1 | x |  
+   b | 2 | y |  
+   c |   | 4 | i
+   d |   | 5 | j
+</code></pre></div>
+<p>Si nota che i <code>null</code> sono in corrispondenza delle etichette di riga non presenti
+negli indici delle colonne in cui appaiono. La richiesta che gli indici di riga
+non abbiano etichette in comune è necessaria per evitare la possibilità che in
+corrispondenza di una etichetta di riga ci siano più valori per una certa
+colonna.</p>
+<p>Passiamo ora al caso in cui due tabelle (i cui indici di intestazione di colonna
+non devono avere etichette comuni) si <strong>affianchino in orizzontale</strong>. Gli indici
+delle intestazioni di colonna e di riga risultanti sono dati dalla fusione dei
+rispettivi indici delle due tabelle. Le colonne sono date dalla
+<em>reindicizzazione</em> rispetto ai nuovi indici. Si considerino per esempio le
+tabelle:</p>
+<div class="highlight"><pre><span></span><code>first | A | B
+------+---+--
+    a | 1 | x
+    b | 2 | y
+    c | 3 | z
+</code></pre></div>
+<p>e</p>
+<div class="highlight"><pre><span></span><code>second | C | D
+-------+---+--
+     b | 4 | i
+     c | 5 | j
+     d | 6 | k
+</code></pre></div>
+<p>Il risultato che si ottiene impilando in orizzontale alla prima la seconda è </p>
+<div class="highlight"><pre><span></span><code>first | A | B | C | D
+------+---+---+---+--
+    a | 1 | x |   |  
+    b | 2 | y | 4 | i
+    c | 3 | z | 5 | j
+    d |   |   | 6 | k
+</code></pre></div>
+<h3>Trasformare</h3>
+<p>Talvolta è utile "trasformare" i dati in una colonna, o tabella. Questo può
+avvenire in due modi:</p>
+<ul>
+<li>
+<p>data una funzione <span class="arithmatex">\(f\)</span> che trasforma un valore in un altro, è possibile
+  applicarla a tutti i valori di una colonna, o tabella, ottenendo una nuova
+  colonna, o tabella;</p>
+</li>
+<li>
+<p>analogamente, data una funzione <span class="arithmatex">\(\phi\)</span> che trasforma una colonna in un'altra,
+  è possibile applicarla a tutte le colonne di una tabella, ottenendo una nuova
+  tabella.</p>
+</li>
+</ul>
+<h4>I valori (nelle colonne e tabelle)</h4>
+<p>Per descrivere le <strong>funzioni</strong> in Java è molto comodo usare l'interfaccia
+<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html"><code>Function</code></a>
+(o le sue varianti nel pacchetto
+<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html"><code>java.util.function</code></a>).</p>
+<p>Ad esempio, per tradurre le stringhe nella loro lunghezza si può usare la seguente classe:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">StringaALunghezza</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>che, applicata alla colonna</p>
+<p><div class="highlight"><pre><span></span><code>  | Giorni   
+--+----------
+0 | Lunedì   
+1 | Martedì  
+2 | Mercoledì
+3 | Giovedì  
+4 | Venerdì  
+5 | Sabato   
+6 | Domenica 
+</code></pre></div>
+produce la colonna</p>
+<div class="highlight"><pre><span></span><code>  | Giorni
+--+-------
+0 | 6     
+1 | 7     
+2 | 9     
+3 | 7     
+4 | 7     
+5 | 6     
+6 | 8     
+</code></pre></div>
+<h4>Le colonne (nelle tabelle)</h4>
+<p>Se invece volessimo fare un po' di statistica, potremmo usare (una volta
+terminata l'implementazione) la seguente classe:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">class</span> <span class="nc">MinMaxSum</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Function</span><span class="o">&lt;</span><span class="n">Column</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nd">@Override</span>
+<span class="w">      </span><span class="kd">public</span><span class="w"> </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">Column</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>che a partire dalla tabella</p>
+<div class="highlight"><pre><span></span><code>  | C0  | C1 | C2 | C3  | C4
+--+-----+----+----+-----+---
+0 | 170 | 85 | 34 | 170 | 85
+1 | 100 | 50 | 20 | 100 | 50
+2 | 50  | 25 | 10 | 50  | 25
+3 | 20  | 10 | 4  | 20  | 10
+4 | 10  | 5  | 2  | 10  | 5 
+5 | 20  | 10 | 4  | 20  | 10
+6 | 50  | 25 | 10 | 50  | 25
+7 | 100 | 50 | 20 | 100 | 50
+</code></pre></div>
+<p>produce la tabella</p>
+<div class="highlight"><pre><span></span><code>  | C0  | C1  | C2  | C3  | C4 
+--+-----+-----+-----+-----+----
+0 | 10  | 5   | 2   | 10  | 5  
+1 | 170 | 85  | 34  | 170 | 85 
+2 | 520 | 260 | 104 | 520 | 260
+</code></pre></div>
+<p>in cui ogni colonna è stata sostituita da una nuova colonna in cui compaiono il
+suo minimo e massimo valore e la somma di tutti i valori.</p>
+<blockquote>
+<p><strong>Nota bene</strong>: occorre fare attenzione però: la trasformazione non può
+limitarsi ad applicare la funzione, perché potrebbe produrre colonne con
+indici diversi o nomi ripetuti. Per questa ragione, la trasformazione deve
+curarsi di ripristinare i nomi originali e di imporre che tutte le colonne
+risultati abbiano l'indice della prima.</p>
+</blockquote>
+<h2>Uso dei generici</h2>
+<p>Dato che le colonne possono contenere valori di tipo diverso, al fine di
+favorire un migliore controllo dei tipi, piuttosto che sviluppare classi
+indipendenti per ciascun tipo di dato (prive di una interfaccia comune) o ancor
+peggio utilizzare solo <code>Object</code> come per gli indici, può avere senso utilizzare
+il meccanismo dei generici. </p>
+<p>Tramite essi sarebbe possibile costruire una bozza di <em>interfaccia</em> per le
+colonne, come ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="n">V</span><span class="w"> </span><span class="nf">atPosition</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
+<span class="w">  </span><span class="n">V</span><span class="w"> </span><span class="nf">atLabel</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">label</span><span class="p">);</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">map</span><span class="p">(</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">func</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>così che, una volta estratti i valori, si possa operare su di essi a seconda del
+tipo (ad esempio, effettuando operazioni aritmetiche sui numeri, o manipolazioni
+specifiche sulle date ed orari); similmente, le tabelle potrebbero soddisfare la
+seguente:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Table</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">columnAtPosition</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">colPosition</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">columnAtLabel</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">colLabel</span><span class="p">);</span>
+<span class="w">  </span><span class="n">V</span><span class="w"> </span><span class="nf">atPosition</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">rowPosition</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">colPosition</span><span class="p">);</span>
+<span class="w">  </span><span class="n">V</span><span class="w"> </span><span class="nf">atLabel</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">rowLabel</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">colLabel</span><span class="p">);</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Table</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">map</span><span class="p">(</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">V</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">func</span><span class="p">);</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Table</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">mapColumn</span><span class="p">(</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">func</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Nota bene</strong>: per eccesso di zelo si potrebbe assumere lo stesso
+comportamento anche per gli indici, arrivando ad avere un tipo generico
+<code>Index&lt;I&gt;</code> e quindi colonne e tabelle a due parametri, come <code>Column&lt;I, V&gt;</code> o
+<code>Column&lt;Index&lt;I&gt;, V&gt;</code>. Questo approccio è però <strong>fortemente sconsigliato</strong>
+perché complica inutilmente l'architettura del codice e le segnature dei vari
+metodi e costruttori. </p>
+</blockquote>
+<p>Per l'indice è sufficiente usare i soli <code>Object</code> (dal momento che le etichette,
+una volta estratte, non sono di norma soggette ad operazioni che dipendano dal
+loro tipo).</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Index</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Iterable</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">positionOf</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">label</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Object</span><span class="w"> </span><span class="nf">labelAt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Potrebbe essere opportuno consentire una certa libertà nei costruttori, se
+<code>ColumnImpl</code> e <code>TableImpl</code> fossero classi che implementano rispettivamente
+l'interfaccia delle colonne e tabelle, alcuni costruttori potrebbe avere la
+segnatura</p>
+<div class="highlight"><pre><span></span><code><span class="n">ColumnImpl</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="n">values</span><span class="p">)</span>
+<span class="n">TableImpl</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Column</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">V</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div>
+<p>piuttosto che la più elementare</p>
+<div class="highlight"><pre><span></span><code><span class="n">ColumnImpl</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span><span class="w"> </span><span class="n">values</span><span class="p">)</span>
+<span class="n">TableImpl</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Column</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div>
+<p>così come usare una segnatura più "ampie" per <code>map</code>, come ad esempio</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Column</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">map</span><span class="p">(</span><span class="n">Function</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">func</span><span class="p">)</span>
+</code></pre></div>
+<p>Attenzione però: l'uso delle <em>bounded wildcard</em> è molto complicato ed è
+<strong>fortemente sconsigliato a chi ha poca esperienza</strong> nella costruzione di
+generici.</p>
+<blockquote>
+<p><strong>Nota bene</strong>: osservi che <strong>una soluzione semplice e funzionante è sempre
+preferibile ad una soluzione eccessivamente complicata e involuta</strong>, che per
+giunta potrebbe presentare difetti di funzionamenti di cui potrebbe non
+rendersi conto (ma che molto probabilmente porterebbe al mancato superamento
+della prova, se presenti).</p>
+<p><strong>Nota bene</strong>: le interfacce abbozzate in questa sezione hanno uno scopo
+esclusivamente esemplificativo, non sono da intendersi come una indicazione su
+come è necessario strutturare il codice; si osserva viceversa che <em>l'uso di
+interfacce, in presenza di una singola implementazione per ciascuna, è in
+generale sovrabbondante</em> caratteristica che, non plausibilmente giustificata,
+può essere valutata negativamente.</p>
+</blockquote>
+<h2>Input/Output</h2>
+<p>I <em>client</em> richiedono di leggere e scrivere colonne e tabelle in formato
+testuale; mentre generare l'output è elementare (a meno della giustificazione a
+destra, o sinistra), la lettura è più complessa per cui è provvisto del supporto
+che può liberamente (cioè non necessariamente) usare.</p>
+<h3>Output</h3>
+<p>L'unico output richiesto è di tipo testuale. Come ha notato in tutti gli esempi,
+il comportamento è omogeneo e molto semplice:</p>
+<ul>
+<li>
+<p>gli indici (se emessi non assieme a colonne, o tabelle) sono dati dal nome
+  (eventualmente vuoto in caso di <code>null</code>) e dalle etichette, separate da una
+  linea di <code>-</code> e giustificate a sinistra;</p>
+</li>
+<li>
+<p>le colonne hanno alla loro destra l'indice con le etichette giustificate a
+  destra seguito dai valori giustificati a sinistra; tra i nomi di indice,
+  colonna etichette e valori sono presenti gli opportuni separatori <code>|</code>, <code>-</code> e
+  <code>+</code>;</p>
+</li>
+<li>
+<p>le tabelle hanno la prima colonna (stampata come sopra) seguita dalla
+  giustapposizione delle altre colonne (prive di indice).</p>
+</li>
+</ul>
+<h3>Parsing</h3>
+<p>Leggere i dati di ingresso è più complesso. Per questa ragione è stata
+approntata la class di support <code>utils.InputParsing</code> che contiene i metodi</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Descriptor</span><span class="w"> </span><span class="nf">parseDescriptor</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="nf">parseValues</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<p>che, ricevuta una lina di testo contenente l'entità da analizzare, riportano
+rispettivamente:</p>
+<ul>
+<li>un <code>Descriptor</code> che descrive cosa ci si appresta a leggere,</li>
+<li>un array di <code>Object</code> che contiene i valori letti (ciascuno con il tipo più
+  appropriato tra <code>Boolean</code>, <code>Integer</code>, <code>Double</code>, <code>String</code> e <code>LocalDateTime</code>).</li>
+</ul>
+<p>I descrittori sono una famiglia di <code>record</code> che analizzano una linea di testo
+della forma:</p>
+<div class="highlight"><pre><span></span><code>#index[len]
+#index[len, name]
+#column[cols]
+#column[cols, type]
+#column[cols, type, name]
+#table[rows, cols]
+#table[rows, cols, type]
+</code></pre></div>
+<p>dove <code>len</code>, <code>rows</code> e <code>cols</code> sono interi positivi (che denotano, rispettivamente,
+la lunghezza dell'indice, o il numero di colonne della tabella o riga, e il
+numero di righe della tabella), <code>name</code> è una stringa e <code>type</code> è una tra le
+stringhe: <code>string</code> <code>boolean</code> <code>number</code>, <code>integer</code>, <code>double</code>, o <code>datetime</code>.</p>
+<p>La funzione <code>parseDescriptor</code> restituisce un oggetto avente uno dei seguenti tipi:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">record</span> <span class="nc">IndexDescriptor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Descriptor</span><span class="p">;</span>
+<span class="kd">record</span> <span class="nc">ColumnDescriptor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Descriptor</span><span class="p">;</span>
+<span class="kd">record</span> <span class="nc">TableDescriptor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cols</span><span class="p">,</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Descriptor</span><span class="p">;</span>
+</code></pre></div>
+popolati con i dati presi dalla linea di testo, rimpiazzando i nomi non presenti
+con <code>null</code> e i tipi non presenti con <code>Object</code>.</p>
+<p>Usando opportunamente tali funzioni è abbastanza semplice leggere tutti i file
+di test relativi ai vari <em>client</em>.</p>
+<h2>Cosa è necessario implementare</h2>
+<p>Dovrà implementare una gerarchia di oggetti utili a:</p>
+<ul>
+<li>
+<p>rappresentare le entità fondamentali <strong>indice</strong>, <strong>colonna</strong> e <strong>tabella</strong>;</p>
+</li>
+<li>
+<p>gestire (oltre alla costruzione delle entità) le competenze fondamentali come
+  l'accesso ai valori e la fabbricazione di entità con nuovi nomi, o indici;</p>
+</li>
+<li>
+<p>gestire le operazioni avanzate di <em>impilamento</em>, <em>affiancamento</em> e
+  <em>trasformazione</em> delle entità (limitatamente a quanto necessario per
+  realizzare in modo ragionevole i <em>client</em>);</p>
+</li>
+<li>
+<p>implementare tutti i <em>client</em>, ossia le classi di test (come descritto di
+  seguito).</p>
+</li>
+</ul>
+<p>Al fine di evitare confusione con i client (descritti nella prossima
+sottosezione), è consigliabile che il suo codice sia contenuto in una gerarchia
+di pacchetti, ad esempio nel pacchetto <code>mole</code>, i cui sorgenti dovranno
+essere nella directory <code>src/main/java/mole</code>.</p>
+<h3>Le classi client</h3>
+<p>Facendo uso delle classi della sua soluzione, dovrà quindi implementare una
+serie di classi <em>client</em> secondo quanto illustrato nelle
+<a href="ISTRUZIONI.html">istruzioni</a> e seguendo attentamente le <a href="CLIENTS.html">specifiche del
+docente</a>.</p>
+<p>Si ricorda che <strong>il progetto non sarà valutato a meno che tutti i test</strong> svolti
+tramite il comando <code>gradle test</code> che esercita tali client <strong>diano esito
+positivo</strong>.</p>
+<h2>Codice di condotta</h2>
+<p>Dovendo svolgere il progetto a casa non le vengono imposte particolari
+restrizioni delle quali sarebbe peraltro difficile verificare il rispetto.</p>
+<p>Le è pertanto <strong>consentito</strong> di avvalersi:</p>
+<ul>
+<li>di qualunque risorsa disponibile in rete,</li>
+<li>di strumenti di supporto basati sull'AI (come <a href="https://github.com/features/copilot">GitHub
+  Copilot</a>, o
+  <a href="https://chat.openai.com/">ChatGPT</a>),</li>
+<li>del <em>confronto</em> con altri studenti, o professionisti,</li>
+</ul>
+<p>sia per la <em>progettazione</em> che per l'<em>implementazione</em> e <em>documentazione</em> del
+codice. Ogni supporto che la aiuti a apprendere e dominare gli obiettivi
+culturali dell'insegnamento è benvenuto! </p>
+<p>D'altro canto le viene  <strong>formalmente richiesto di elencare</strong> (nella
+documentazione del codice) in modo chiaro ed esaustivo <strong>ogni risorsa di cui si
+è avvalso al di fuori di quelle esplicitamente indicate come materiale
+didattico</strong> dell'insegnamento. L'omissione di tale elenco può costituire motivo
+di <strong>respingimento</strong> del progetto e, in gravi casi di <em>plagio</em> alle <strong>sanzioni
+disciplinari</strong> previste.</p>
+<p>Si sottolinea che consegnando il progetto lei dichiara di fatto di esserne
+l'<strong>unico autore</strong>, assumendosi la piena responsabilità dell'<strong>originalità</strong> del
+codice e della documentazione che esso include, nonché della completezza e
+veridicità del suddetto elenco. Per questa ragione <strong>non le è consentito
+condividere il suo codice con altri studenti</strong>.</p>
+<p>Durante la discussione orale, eventuali incertezze nell'<em>illustrare</em>,
+<em>giustificare</em> o <em>modificare</em> il materiale consegnato non potranno che essere a
+lei esclusivamente addebitate e, come tali, <strong>valutate negativamente</strong>.</p>
+<blockquote>
+<p><strong>Nota bene</strong>: la violazione del presente codice di condotta, qualora
+ne venga accertato il dolo, può condurre a <strong>sanzioni disciplinari</strong> 
+come previste dal comma d) dell'art. 52 del 
+<a href="https://www.unimi.it/sites/default/files/regolamenti/Regolamento%20generale%20d%27Ateneo_in%20vigore%20dal%202%20giugno%202020.pdf">Regolamento generale d'Ateneo</a></p>
+</blockquote>
+<h2>Note legali e copyright</h2>
+<p>Ai sensi della Legge n. 633/1941 e successive modificazioni, l'autore si
+riserva, in ogni forma e modo nei limiti fissati dalla legge, il diritto
+esclusivo di pubblicare e di utilizzare il materiale contenuto nel presente
+repository.</p>
+<p>Più specificatamente, è fatto <strong>divieto di riprodurre, trascrivere, comunicare
+al pubblico, distribuire, tradurre, elaborare e modificare il presente
+materiale</strong> (codice sorgente compreso), in tutto o in parte, senza specifica
+autorizzazione scritta dell'autore.</p>
+</body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</html>

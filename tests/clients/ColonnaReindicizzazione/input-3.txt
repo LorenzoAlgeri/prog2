@@ -1,0 +1,4 @@
+#column[4, string, pippo]
+zero uno due tre
+#index[4, paperino]
+1 3 4 2

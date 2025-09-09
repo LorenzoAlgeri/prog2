@@ -1,0 +1,6 @@
+#column[4, string, pippo]
+#index[4, pluto]
+1 2 3 4
+uno due tre quattro
+#index[1]
+inutilizzato

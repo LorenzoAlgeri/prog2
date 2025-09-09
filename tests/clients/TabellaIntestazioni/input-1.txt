@@ -1,0 +1,5 @@
+#table[2,2]
+#column[2]
+un bel
+#column[2]
+giorno assolato

@@ -1,0 +1,4 @@
+#column[4, string, pippo]
+uno due tre quattro
+#index[1]
+inutilizzato

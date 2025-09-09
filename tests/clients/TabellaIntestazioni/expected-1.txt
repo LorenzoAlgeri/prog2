@@ -1,0 +1,14 @@
+  | prima | seconda 
+--+-------+---------
+0 | un    | giorno  
+1 | bel   | assolato
+
+  | prima
+--+------
+0 | un   
+1 | bel  
+
+  | seconda 
+--+---------
+0 | giorno  
+1 | assolato

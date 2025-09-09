@@ -1,0 +1,23 @@
+   | C0     | C1    | C2     
+---+--------+-------+--------
+r1 | un     | di    | non    
+r2 | bel    | caldo | di     
+r3 | giorno | sole  | piaggia
+
+   | C0    
+---+-------
+r1 | un    
+r2 | bel   
+r3 | giorno
+
+   | C1   
+---+------
+r1 | di   
+r2 | caldo
+r3 | sole 
+
+   | C2     
+---+--------
+r1 | non    
+r2 | di     
+r3 | piaggia

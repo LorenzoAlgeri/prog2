@@ -1,0 +1,12 @@
+#index[4, primo]
+1 2 3 4
+#index[4, secondo]
+1 2 3 4
+#index[3, terzo]
+1 2 3
+#index[3, quarto]
+2 3 4
+#index[4, primo]
+1 2 3 4
+#index[4, primo]
+1 2 3 4

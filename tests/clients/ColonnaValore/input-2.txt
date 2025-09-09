@@ -1,0 +1,4 @@
+#column[3, integer]
+#index[3]
+0 due 3
+0 1 2

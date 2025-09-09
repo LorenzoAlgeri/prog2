@@ -1,0 +1,5 @@
+#table[3, 2]
+#column[3, integer, uno]
+11 21 31
+#column[3, integer, due]
+12 22 32

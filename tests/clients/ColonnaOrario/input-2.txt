@@ -1,0 +1,4 @@
+#column[3, datetime, ore minuti secondi]
+#index[3, minuti]
+quindici venticique otto
+2007-12-03T10:15:30 2017-12-04T10:25:15 2027-12-05T09:08:07
